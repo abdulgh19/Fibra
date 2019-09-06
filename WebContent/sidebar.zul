@@ -1,0 +1,115 @@
+<zk xmlns:x="xhtml" xmlns:zk="zk">
+	<x:aside class="left-side sidebar-offcanvas"
+		style="overflow:auto">
+
+
+		<x:section class="sidebar">
+			<x:div class="user-panel">
+				<div class="pull-left image">
+					<image sclass="img-circle" id="imgPflSide"
+						src="/img/logo_Fibra.png">
+					</image>
+				</div>
+				<!-- 	<div class="pull-left info">
+					<x:a href="#">
+					<x:i class="fa fa-circle text-success"></x:i>
+					Activo
+					</x:a>
+					</div> -->
+
+				<!-- visible to small devices only -->
+
+			</x:div>
+			<x:ul class="sidebar-menu">
+				<!-- 				<x:li sclass="@bind(vm.initPage)">
+					<x:a class="cursor" onClick="@command('home')">
+					<x:i class="fa fa-home"></x:i>
+					<x:span>Parametrização</x:span>
+					</x:a>
+					</x:li> -->
+
+				<x:li sclass="treeview ">
+					<x:a href="#" visible="true">
+						<x:i class="fa  fa-cogs"></x:i>
+						<x:span>Parametros</x:span>
+						<x:i class="fa fa-angle-left pull-right"></x:i>
+					</x:a>
+					<x:ul class="treeview-menu">
+
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarCategoria')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Categorias
+							</x:a>
+						</x:li>
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarMaterial')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Material
+							</x:a>
+						</x:li>
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarTipoCliente')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Tipo de Cliente
+							</x:a>
+						</x:li>
+					</x:ul>
+				</x:li>
+
+
+				<x:li sclass="treeview ">
+					<x:a href="#" visible="true">
+						<x:i class="fa  fa-money"></x:i>
+						<x:span>Caixa</x:span>
+						<x:i class="fa fa-angle-left pull-right"></x:i>
+					</x:a>
+					<x:ul class="treeview-menu">
+
+						<!-- Gerais -->
+
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarCategoria')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Factura Proforma
+							</x:a>
+						</x:li>
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarVenda')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Vendas
+							</x:a>
+						</x:li>
+
+						<x:li>
+							<x:a href="#"
+								onClick="@command('registarCliente')">
+								<x:i class="fa fa-dot-circle-o"></x:i>
+								Clientes
+							</x:a>
+						</x:li>
+
+					</x:ul>
+				</x:li>
+
+
+
+			</x:ul>
+			<x:div class="visible-xs hidden-sm hidden-md hidden-lg">
+				<x:ul class="nav nav-pills nav-stacked custom-nav">
+					<x:li>
+						<x:a href="j_spring_security_logout">
+							<x:i class="fa fa-sign-out"></x:i>
+							<x:span>Sair</x:span>
+						</x:a>
+					</x:li>
+				</x:ul>
+			</x:div>
+		</x:section>
+	</x:aside>
+</zk>

@@ -1,0 +1,178 @@
+<zk xmlns:x="xhtml" xmlns:zk="zk">
+	<window apply="fibra.mz.controller.MaterialCtrl" id="win_regFluxo">
+		<div class="row">
+			<div zclass="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+				<div zclass="box box-default">
+						<div zclass="box-header">
+						<x:label class="box-title"
+							style="font-family:Georgia,serif;color:#4E443C; font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;">
+							Estado
+						</x:label>
+					</div>
+					<div zclass="box-body">
+						<div class="row">
+							<div zclass="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+							
+							
+							<groupbox> 
+							<caption>Pesquisa</caption>
+								<div zclass="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<div class="input-group">
+									<textbox zclass="form-control"
+										placeholder="Procurar pelo nome do Estado"
+										id="txb_nomefind" />
+											<x:span class="input-group-addon" forward="onClick=onClickprcurar()">
+										<x:i class="fa  fa-search"></x:i>
+									</x:span>
+								
+								</div>
+							</div>
+							
+								<div zclass="col-lg-6 col-md-6 col-sm-12 col-xs-12" align="right">
+								<div class="input-group" align="right" style="margin-top:7px">
+								<x:label>Fluxo activo?</x:label>
+									<radiogroup>
+										<radio label="SIM" style="margin-left:5px" id="rbx_Simfin" forward="onCheck=onClickprcurar()"/>
+										<radio label="NÃO" style="margin-left:15px" checked="true" id="rbx_Naofind" forward="onCheck=onClickprcurar()"/>
+									</radiogroup>
+								</div>
+							</div>
+							
+							</groupbox>
+							
+							
+							<div zclass="col-lg-2 col-md-2 col-sm-12 col-xs-12" visible="false">
+								<button zclass="btn btn-info btn-sm "
+								type="button" id="btn_procurar" iconSclass="fa  fa-search" width="" forward="onClick=onClickprcurar()">
+								Procurar
+							</button>
+							</div>
+
+							</div>
+							
+							<div zclass="col-lg-2 col-md-2 col-sm-12 col-xs-12" align="left" style="margin-left:-20px; margin-top:16px">
+								<x:a class="btn btn-app"
+									data-toggle="modal" data-target="#myModal" style="width:100%">
+									<x:i class="fa fa-search"></x:i>
+									Pesquisar
+								</x:a>
+							</div>
+						</div>
+                        
+                        <x:hr/>
+   
+     
+  
+  
+  		<div class="row">
+							<div zclass="col-lg-12 col-md-12 col-sm-12">
+								<div class="form-group">
+								    <x:label>Designação</x:label>
+								    <div class="input-group">
+									    <textbox zclass="form-control" placeholder="Informe a designação da Categoria aqui ..."  
+									    	constraint="no empty : Não deve estar vazio ou conter apenas espaços em branco!" id="txt_designacao"/>
+							  			<x:span class="input-group-addon"><x:i class="fa  fa-edit"></x:i></x:span>
+								   	</div>
+								</div>
+							</div>
+						</div>
+						
+						  <div zclass="box-footer">
+		        <div align="center">
+		        <button zclass="btn btn-danger btn-sm" type="button" id="btn_cancelar" iconSclass="fa fa-undo">
+				 Cancelar
+	            </button>
+		        <label width="5%"></label>
+		          <button zclass="btn btn-success btn-sm" type="button"	id="btn_gravar" iconSclass="fa fa-save" autodisable="self,btn_actualizar">
+				
+						Gravar
+				  </button>
+				   <label width="5%"></label>
+				  <button zclass="btn btn-info btn-sm" type="button" visible="false"	id="btn_actualizar" iconSclass="fa fa-refresh">
+					
+						Actualizar
+				  </button>
+				  </div>
+		        </div>
+                       
+     
+     
+     
+     
+                      
+                        
+                        
+                        
+                        
+
+						<div class="row">
+							<div
+								zclass="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<listbox id="lbx_estado"
+									checkmark="true" rows="10">
+									<listhead>
+										<listheader label="#" width="5%" />
+										<listheader label="Nome" sort="auto(nome)" />
+										<listheader label="Activo?" align="center" width="12%"/>
+										<listheader label="Editar" width="10%" align="center"/>
+									</listhead>
+									<template name="model">
+										<listitem>
+											<listcell></listcell>
+											<listcell label="${each.nome}" />
+									       <listcell>
+										   <div align="center">
+											<button zclass="btn btn-sm "
+												visible="${each.activo=='true'}">
+												Sim
+											</button>
+
+											<button
+												zclass="btn btn btn-sm "
+												visible="${each.activo=='false'}">
+												Não
+											</button>
+										  </div>
+
+									     </listcell>
+										<listcell>
+												<div align="center">
+											<x:button type="button"
+												class="btn btn-info btn-sm" data-toggle="modal"
+												data-target="#myModal">
+											<x:i class="fa fa-edit"></x:i>
+											</x:button>
+										</div>
+										
+										
+										</listcell>
+												
+										</listitem>
+									</template>
+								</listbox>
+							</div>
+						</div>
+
+
+					</div>
+					<div zclass="box-footer">
+					  <div align="center">
+	                     <button zclass="btn btn-warning btn-sm"
+							type="button" id="btn_imprimir" iconSclass="fa fa-print">
+
+							Imprimir PDF
+						</button>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	</window>
+</zk>
