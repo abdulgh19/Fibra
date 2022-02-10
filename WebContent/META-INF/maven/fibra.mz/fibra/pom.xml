@@ -11,7 +11,7 @@
 	<properties>
 		<zk.version>7.0.3</zk.version>
 		<commons-io>2.4</commons-io>
-		<hibernate.version>4.3.5.Final</hibernate.version>
+		<hibernate.version>5.4.24.Final</hibernate.version>
 		<hibernate-validator.version>5.1.1.Final</hibernate-validator.version>
 		<mysql-connector-java.version>5.1.34</mysql-connector-java.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
